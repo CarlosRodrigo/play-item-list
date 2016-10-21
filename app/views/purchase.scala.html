@@ -1,4 +1,4 @@
-@(items: List[models.data.Item])
+@(items: List[models.data.Item], itemForm: Form[models.data.Item])
 
 @import helper._
 
@@ -13,4 +13,12 @@
 			</li>
 		}
 	</ul>
+	
+	<h2>Cadastrar novo item</h2>
+	
+	@form(routes.RegisterPurchaseController.register()) {
+		@inputText(itemForm("Name"))
+		@inputText(itemForm("Value"))
+		<input type="submit" value="Create">
+	}
 }
