@@ -9,4 +9,4 @@ GET     /                           controllers.Application.index()
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 POST	/compras					controllers.RegisterPurchaseController.register()
-GET		/compras					controllers.RegisterPurchaseController.purchases()
+GET		/compras					controllers.RegisterPurchaseController.purchase()

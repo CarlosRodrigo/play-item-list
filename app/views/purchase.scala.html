@@ -1,0 +1,16 @@
+@(items: List[models.data.Item])
+
+@import helper._
+
+@main("Compras") {
+
+    <h1>@items.size() iten(s)</h1>
+
+	<ul>
+		@for(item <- items) {
+			<li>
+			Item: @item.name - Valor: R$ @item.value
+			</li>
+		}
+	</ul>
+}

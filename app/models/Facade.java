@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 import models.business.PurchaseController;
 import models.data.Item;
 
@@ -22,5 +24,9 @@ public class Facade {
 	
 	public void purchaseItem(Item item) {
 		purchaseController.purchaseItem(item);
+	}
+	
+	public List<Item> getItens() {
+		return purchaseController.getItems();
 	}
 }
